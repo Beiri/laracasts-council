@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section ('head')
+@section('head')
     <script src='https://www.google.com/recaptcha/api.js'></script>
 @endsection
 
@@ -21,7 +21,8 @@
                                     <option value="">Choose One...</option>
 
                                     @foreach ($channels as $channel)
-                                        <option value="{{ $channel->id }}" {{ old('channel_id') == $channel->id ? 'selected' : '' }}>
+                                        <option value="{{ $channel->id }}"
+                                            {{ old('channel_id') == $channel->id ? 'selected' : '' }}>
                                             {{ $channel->name }}
                                         </option>
                                     @endforeach
@@ -31,7 +32,7 @@
                             <div class="form-group">
                                 <label for="title">Title:</label>
                                 <input type="text" class="form-control" id="title" name="title"
-                                       value="{{ old('title') }}" required>
+                                    value="{{ old('title') }}" required>
                             </div>
 
                             <div class="form-group">
@@ -40,7 +41,7 @@
                             </div>
 
                             <div class="form-group">
-                                <div class="g-recaptcha" data-sitekey="6LeXrDUUAAAAAFco7ShbMrJx0fh-ZrLxK9Amd-zP"></div>
+                                <div class="g-recaptcha" data-sitekey="{{ config('council.recaptcha.key') }}"></div>
                             </div>
 
                             <div class="form-group">
