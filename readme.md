@@ -1,9 +1,14 @@
+# Council
+
+This is an open source forum that was built and maintained at Laracasts.com.
+
 ## Installation
 
 ### Step 1.
 
 > To run this project, you must have PHP 7 installed as a prerequisite.
-> Begin by cloning this repository to your machine, and installing all Composer dependencies.
+
+Begin by cloning this repository to your machine, and installing all Composer dependencies.
 
 ```bash
 git clone git@github.com:JeffreyWay/council.git
@@ -23,6 +28,12 @@ DB_PORT=3306
 DB_DATABASE=council
 DB_USERNAME=root
 DB_PASSWORD=
+```
+
+Then, migrate your database to create tables.
+
+```
+php artisan migrate
 ```
 
 ### Step 3.
