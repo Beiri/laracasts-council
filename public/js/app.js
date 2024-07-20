@@ -79855,7 +79855,7 @@ var Component = __webpack_require__(5)(
   /* moduleIdentifier (server only) */
   null
 )
-Component.options.__file = "/Users/jeffreyway/code/forum/resources/assets/js/components/Flash.vue"
+Component.options.__file = "/Users/beiri/Projects/Laravel/laracasts-council/resources/assets/js/components/Flash.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] Flash.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -79866,9 +79866,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-486b00f7", Component.options)
+    hotAPI.createRecord("data-v-53347518", Component.options)
   } else {
-    hotAPI.reload("data-v-486b00f7", Component.options)
+    hotAPI.reload("data-v-53347518", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true
@@ -79889,13 +79889,13 @@ var content = __webpack_require__(486);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(488)("8f410db6", content, false);
+var update = __webpack_require__(488)("5771b0e8", content, false);
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
  if(!content.locals) {
-   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-486b00f7\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Flash.vue", function() {
-     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-486b00f7\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Flash.vue");
+   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-53347518\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Flash.vue", function() {
+     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-53347518\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Flash.vue");
      if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
      update(newContent);
    });
@@ -80340,7 +80340,7 @@ module.exports.render._withStripped = true
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-     require("vue-hot-reload-api").rerender("data-v-486b00f7", module.exports)
+     require("vue-hot-reload-api").rerender("data-v-53347518", module.exports)
   }
 }
 
@@ -80361,7 +80361,7 @@ var Component = __webpack_require__(5)(
   /* moduleIdentifier (server only) */
   null
 )
-Component.options.__file = "/Users/jeffreyway/code/forum/resources/assets/js/components/Paginator.vue"
+Component.options.__file = "/Users/beiri/Projects/Laravel/laracasts-council/resources/assets/js/components/Paginator.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] Paginator.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -80372,9 +80372,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-608f05d0", Component.options)
+    hotAPI.createRecord("data-v-bcda89d6", Component.options)
   } else {
-    hotAPI.reload("data-v-608f05d0", Component.options)
+    hotAPI.reload("data-v-bcda89d6", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true
@@ -80504,7 +80504,7 @@ module.exports.render._withStripped = true
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-     require("vue-hot-reload-api").rerender("data-v-608f05d0", module.exports)
+     require("vue-hot-reload-api").rerender("data-v-bcda89d6", module.exports)
   }
 }
 
@@ -80525,7 +80525,7 @@ var Component = __webpack_require__(5)(
   /* moduleIdentifier (server only) */
   null
 )
-Component.options.__file = "/Users/jeffreyway/code/forum/resources/assets/js/components/UserNotifications.vue"
+Component.options.__file = "/Users/beiri/Projects/Laravel/laracasts-council/resources/assets/js/components/UserNotifications.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] UserNotifications.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -80536,9 +80536,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-26743ee4", Component.options)
+    hotAPI.createRecord("data-v-54632fe1", Component.options)
   } else {
-    hotAPI.reload("data-v-26743ee4", Component.options)
+    hotAPI.reload("data-v-54632fe1", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true
@@ -80631,7 +80631,7 @@ module.exports.render._withStripped = true
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-     require("vue-hot-reload-api").rerender("data-v-26743ee4", module.exports)
+     require("vue-hot-reload-api").rerender("data-v-54632fe1", module.exports)
   }
 }
 
@@ -80652,7 +80652,7 @@ var Component = __webpack_require__(5)(
   /* moduleIdentifier (server only) */
   null
 )
-Component.options.__file = "/Users/jeffreyway/code/forum/resources/assets/js/components/AvatarForm.vue"
+Component.options.__file = "/Users/beiri/Projects/Laravel/laracasts-council/resources/assets/js/components/AvatarForm.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] AvatarForm.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -80663,9 +80663,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-7d7350c6", Component.options)
+    hotAPI.createRecord("data-v-323e5b2e", Component.options)
   } else {
-    hotAPI.reload("data-v-7d7350c6", Component.options)
+    hotAPI.reload("data-v-323e5b2e", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true
@@ -80698,47 +80698,52 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
 
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-    props: ['user'],
+  props: ["user"],
 
-    components: { ImageUpload: __WEBPACK_IMPORTED_MODULE_0__ImageUpload_vue___default.a },
+  components: { ImageUpload: __WEBPACK_IMPORTED_MODULE_0__ImageUpload_vue___default.a },
 
-    data: function data() {
-        return {
-            avatar: this.user.avatar_path
-        };
+  data: function data() {
+    return {
+      avatar: this.user.avatar_path
+    };
+  },
+
+
+  computed: {
+    canUpdate: function canUpdate() {
+      var _this = this;
+
+      return this.authorize(function (user) {
+        return user.id === _this.user.id;
+      });
     },
-
-
-    computed: {
-        canUpdate: function canUpdate() {
-            var _this = this;
-
-            return this.authorize(function (user) {
-                return user.id === _this.user.id;
-            });
-        }
-    },
-
-    methods: {
-        onLoad: function onLoad(avatar) {
-            this.avatar = avatar.src;
-
-            this.persist(avatar.file);
-        },
-        persist: function persist(avatar) {
-            var data = new FormData();
-
-            data.append('avatar', avatar);
-
-            axios.post('/api/users/' + this.user.name + '/avatar', data).then(function () {
-                return flash('Avatar uploaded!');
-            });
-        }
+    reputation: function reputation() {
+      return this.user.reputation + "XP";
     }
+  },
+
+  methods: {
+    onLoad: function onLoad(avatar) {
+      this.avatar = avatar.src;
+
+      this.persist(avatar.file);
+    },
+    persist: function persist(avatar) {
+      var data = new FormData();
+
+      data.append("avatar", avatar);
+
+      axios.post("/api/users/" + this.user.name + "/avatar", data).then(function () {
+        return flash("Avatar uploaded!");
+      });
+    }
+  }
 });
 
 /***/ }),
@@ -80758,7 +80763,7 @@ var Component = __webpack_require__(5)(
   /* moduleIdentifier (server only) */
   null
 )
-Component.options.__file = "/Users/jeffreyway/code/forum/resources/assets/js/components/ImageUpload.vue"
+Component.options.__file = "/Users/beiri/Projects/Laravel/laracasts-council/resources/assets/js/components/ImageUpload.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] ImageUpload.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -80769,9 +80774,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-84f8a1fa", Component.options)
+    hotAPI.createRecord("data-v-fc733c80", Component.options)
   } else {
-    hotAPI.reload("data-v-84f8a1fa", Component.options)
+    hotAPI.reload("data-v-fc733c80", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true
@@ -80833,7 +80838,7 @@ module.exports.render._withStripped = true
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-     require("vue-hot-reload-api").rerender("data-v-84f8a1fa", module.exports)
+     require("vue-hot-reload-api").rerender("data-v-fc733c80", module.exports)
   }
 }
 
@@ -80851,11 +80856,11 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       "width": "50",
       "height": "50"
     }
-  }), _vm._v(" "), _c('h1', {
+  }), _vm._v(" "), _c('h1', [_vm._v("\n      " + _vm._s(_vm.user.name) + "\n      "), _c('small', {
     domProps: {
-      "textContent": _vm._s(_vm.user.name)
+      "textContent": _vm._s(_vm.reputation)
     }
-  })]), _vm._v(" "), (_vm.canUpdate) ? _c('form', {
+  })])]), _vm._v(" "), (_vm.canUpdate) ? _c('form', {
     attrs: {
       "method": "POST",
       "enctype": "multipart/form-data"
@@ -80874,7 +80879,7 @@ module.exports.render._withStripped = true
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-     require("vue-hot-reload-api").rerender("data-v-7d7350c6", module.exports)
+     require("vue-hot-reload-api").rerender("data-v-323e5b2e", module.exports)
   }
 }
 
@@ -80895,7 +80900,7 @@ var Component = __webpack_require__(5)(
   /* moduleIdentifier (server only) */
   null
 )
-Component.options.__file = "/Users/jeffreyway/code/forum/resources/assets/js/components/Wysiwyg.vue"
+Component.options.__file = "/Users/beiri/Projects/Laravel/laracasts-council/resources/assets/js/components/Wysiwyg.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] Wysiwyg.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -80906,9 +80911,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-1b22e0d4", Component.options)
+    hotAPI.createRecord("data-v-157e7a11", Component.options)
   } else {
-    hotAPI.reload("data-v-1b22e0d4", Component.options)
+    hotAPI.reload("data-v-157e7a11", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true
@@ -81271,7 +81276,7 @@ module.exports.render._withStripped = true
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-     require("vue-hot-reload-api").rerender("data-v-1b22e0d4", module.exports)
+     require("vue-hot-reload-api").rerender("data-v-157e7a11", module.exports)
   }
 }
 
@@ -81292,7 +81297,7 @@ var Component = __webpack_require__(5)(
   /* moduleIdentifier (server only) */
   null
 )
-Component.options.__file = "/Users/jeffreyway/code/forum/resources/assets/js/pages/Thread.vue"
+Component.options.__file = "/Users/beiri/Projects/Laravel/laracasts-council/resources/assets/js/pages/Thread.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
 
 /* hot reload */
@@ -81302,9 +81307,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-185bdd35", Component.options)
+    hotAPI.createRecord("data-v-00be6832", Component.options)
   } else {
-    hotAPI.reload("data-v-185bdd35", Component.options)
+    hotAPI.reload("data-v-00be6832", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true
@@ -81397,7 +81402,7 @@ var Component = __webpack_require__(5)(
   /* moduleIdentifier (server only) */
   null
 )
-Component.options.__file = "/Users/jeffreyway/code/forum/resources/assets/js/components/Replies.vue"
+Component.options.__file = "/Users/beiri/Projects/Laravel/laracasts-council/resources/assets/js/components/Replies.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] Replies.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -81408,9 +81413,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-dc949362", Component.options)
+    hotAPI.createRecord("data-v-e7dd60e8", Component.options)
   } else {
-    hotAPI.reload("data-v-dc949362", Component.options)
+    hotAPI.reload("data-v-e7dd60e8", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true
@@ -81529,7 +81534,7 @@ var Component = __webpack_require__(5)(
   /* moduleIdentifier (server only) */
   null
 )
-Component.options.__file = "/Users/jeffreyway/code/forum/resources/assets/js/components/Reply.vue"
+Component.options.__file = "/Users/beiri/Projects/Laravel/laracasts-council/resources/assets/js/components/Reply.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] Reply.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -81540,9 +81545,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-72f316f1", Component.options)
+    hotAPI.createRecord("data-v-00eddb6e", Component.options)
   } else {
-    hotAPI.reload("data-v-72f316f1", Component.options)
+    hotAPI.reload("data-v-00eddb6e", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true
@@ -81680,7 +81685,7 @@ var Component = __webpack_require__(5)(
   /* moduleIdentifier (server only) */
   null
 )
-Component.options.__file = "/Users/jeffreyway/code/forum/resources/assets/js/components/Favorite.vue"
+Component.options.__file = "/Users/beiri/Projects/Laravel/laracasts-council/resources/assets/js/components/Favorite.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] Favorite.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -81691,9 +81696,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-2a81a536", Component.options)
+    hotAPI.createRecord("data-v-3bd6bbc8", Component.options)
   } else {
-    hotAPI.reload("data-v-2a81a536", Component.options)
+    hotAPI.reload("data-v-3bd6bbc8", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true
@@ -81781,7 +81786,7 @@ module.exports.render._withStripped = true
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-     require("vue-hot-reload-api").rerender("data-v-2a81a536", module.exports)
+     require("vue-hot-reload-api").rerender("data-v-3bd6bbc8", module.exports)
   }
 }
 
@@ -82126,7 +82131,7 @@ module.exports.render._withStripped = true
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-     require("vue-hot-reload-api").rerender("data-v-72f316f1", module.exports)
+     require("vue-hot-reload-api").rerender("data-v-00eddb6e", module.exports)
   }
 }
 
@@ -82147,7 +82152,7 @@ var Component = __webpack_require__(5)(
   /* moduleIdentifier (server only) */
   null
 )
-Component.options.__file = "/Users/jeffreyway/code/forum/resources/assets/js/components/NewReply.vue"
+Component.options.__file = "/Users/beiri/Projects/Laravel/laracasts-council/resources/assets/js/components/NewReply.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] NewReply.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -82158,9 +82163,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-78912c1a", Component.options)
+    hotAPI.createRecord("data-v-14cef856", Component.options)
   } else {
-    hotAPI.reload("data-v-78912c1a", Component.options)
+    hotAPI.reload("data-v-14cef856", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true
@@ -83942,7 +83947,7 @@ module.exports.render._withStripped = true
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-     require("vue-hot-reload-api").rerender("data-v-78912c1a", module.exports)
+     require("vue-hot-reload-api").rerender("data-v-14cef856", module.exports)
   }
 }
 
@@ -83981,7 +83986,7 @@ module.exports.render._withStripped = true
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-     require("vue-hot-reload-api").rerender("data-v-dc949362", module.exports)
+     require("vue-hot-reload-api").rerender("data-v-e7dd60e8", module.exports)
   }
 }
 
@@ -84002,7 +84007,7 @@ var Component = __webpack_require__(5)(
   /* moduleIdentifier (server only) */
   null
 )
-Component.options.__file = "/Users/jeffreyway/code/forum/resources/assets/js/components/SubscribeButton.vue"
+Component.options.__file = "/Users/beiri/Projects/Laravel/laracasts-council/resources/assets/js/components/SubscribeButton.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] SubscribeButton.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -84013,9 +84018,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-6daeed63", Component.options)
+    hotAPI.createRecord("data-v-17aff9a0", Component.options)
   } else {
-    hotAPI.reload("data-v-6daeed63", Component.options)
+    hotAPI.reload("data-v-17aff9a0", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true
@@ -84070,7 +84075,7 @@ module.exports.render._withStripped = true
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-     require("vue-hot-reload-api").rerender("data-v-6daeed63", module.exports)
+     require("vue-hot-reload-api").rerender("data-v-17aff9a0", module.exports)
   }
 }
 
@@ -84078,7 +84083,7 @@ if (false) {
 /* 531 */
 /***/ (function(module, exports) {
 
-// removed by extract-text-webpack-plugin
+throw new Error("Module build failed: ModuleBuildError: Module build failed: Error: Node Sass does not yet support your current environment: OS X Unsupported architecture (arm64) with Unsupported runtime (115)\nFor more information on which environments are supported please see:\nhttps://github.com/sass/node-sass/releases/tag/v4.5.3\n    at module.exports (/Users/beiri/Projects/Laravel/laracasts-council/node_modules/node-sass/lib/binding.js:13:13)\n    at Object.<anonymous> (/Users/beiri/Projects/Laravel/laracasts-council/node_modules/node-sass/lib/index.js:14:35)\n    at Module._compile (node:internal/modules/cjs/loader:1358:14)\n    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)\n    at Module.load (node:internal/modules/cjs/loader:1208:32)\n    at Module._load (node:internal/modules/cjs/loader:1024:12)\n    at Module.require (node:internal/modules/cjs/loader:1233:19)\n    at require (node:internal/modules/helpers:179:18)\n    at Object.<anonymous> (/Users/beiri/Projects/Laravel/laracasts-council/node_modules/sass-loader/lib/loader.js:3:14)\n    at Module._compile (node:internal/modules/cjs/loader:1358:14)\n    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)\n    at Module.load (node:internal/modules/cjs/loader:1208:32)\n    at Module._load (node:internal/modules/cjs/loader:1024:12)\n    at Module.require (node:internal/modules/cjs/loader:1233:19)\n    at require (node:internal/modules/helpers:179:18)\n    at loadLoader (/Users/beiri/Projects/Laravel/laracasts-council/node_modules/loader-runner/lib/loadLoader.js:13:17)\n    at iteratePitchingLoaders (/Users/beiri/Projects/Laravel/laracasts-council/node_modules/loader-runner/lib/LoaderRunner.js:169:2)\n    at iteratePitchingLoaders (/Users/beiri/Projects/Laravel/laracasts-council/node_modules/loader-runner/lib/LoaderRunner.js:165:10)\n    at /Users/beiri/Projects/Laravel/laracasts-council/node_modules/loader-runner/lib/LoaderRunner.js:173:18\n    at loadLoader (/Users/beiri/Projects/Laravel/laracasts-council/node_modules/loader-runner/lib/loadLoader.js:36:3)\n    at iteratePitchingLoaders (/Users/beiri/Projects/Laravel/laracasts-council/node_modules/loader-runner/lib/LoaderRunner.js:169:2)\n    at iteratePitchingLoaders (/Users/beiri/Projects/Laravel/laracasts-council/node_modules/loader-runner/lib/LoaderRunner.js:165:10)\n    at /Users/beiri/Projects/Laravel/laracasts-council/node_modules/loader-runner/lib/LoaderRunner.js:173:18\n    at loadLoader (/Users/beiri/Projects/Laravel/laracasts-council/node_modules/loader-runner/lib/loadLoader.js:36:3)\n    at iteratePitchingLoaders (/Users/beiri/Projects/Laravel/laracasts-council/node_modules/loader-runner/lib/LoaderRunner.js:169:2)\n    at iteratePitchingLoaders (/Users/beiri/Projects/Laravel/laracasts-council/node_modules/loader-runner/lib/LoaderRunner.js:165:10)\n    at /Users/beiri/Projects/Laravel/laracasts-council/node_modules/loader-runner/lib/LoaderRunner.js:173:18\n    at loadLoader (/Users/beiri/Projects/Laravel/laracasts-council/node_modules/loader-runner/lib/loadLoader.js:36:3)\n    at iteratePitchingLoaders (/Users/beiri/Projects/Laravel/laracasts-council/node_modules/loader-runner/lib/LoaderRunner.js:169:2)\n    at runLoaders (/Users/beiri/Projects/Laravel/laracasts-council/node_modules/loader-runner/lib/LoaderRunner.js:362:2)\n    at /Users/beiri/Projects/Laravel/laracasts-council/node_modules/webpack/lib/NormalModule.js:193:19\n    at /Users/beiri/Projects/Laravel/laracasts-council/node_modules/loader-runner/lib/LoaderRunner.js:364:11\n    at /Users/beiri/Projects/Laravel/laracasts-council/node_modules/loader-runner/lib/LoaderRunner.js:170:18\n    at loadLoader (/Users/beiri/Projects/Laravel/laracasts-council/node_modules/loader-runner/lib/loadLoader.js:27:11)\n    at iteratePitchingLoaders (/Users/beiri/Projects/Laravel/laracasts-council/node_modules/loader-runner/lib/LoaderRunner.js:169:2)\n    at iteratePitchingLoaders (/Users/beiri/Projects/Laravel/laracasts-council/node_modules/loader-runner/lib/LoaderRunner.js:165:10)\n    at /Users/beiri/Projects/Laravel/laracasts-council/node_modules/loader-runner/lib/LoaderRunner.js:173:18\n    at loadLoader (/Users/beiri/Projects/Laravel/laracasts-council/node_modules/loader-runner/lib/loadLoader.js:36:3)\n    at iteratePitchingLoaders (/Users/beiri/Projects/Laravel/laracasts-council/node_modules/loader-runner/lib/LoaderRunner.js:169:2)\n    at iteratePitchingLoaders (/Users/beiri/Projects/Laravel/laracasts-council/node_modules/loader-runner/lib/LoaderRunner.js:165:10)\n    at /Users/beiri/Projects/Laravel/laracasts-council/node_modules/loader-runner/lib/LoaderRunner.js:173:18\n    at loadLoader (/Users/beiri/Projects/Laravel/laracasts-council/node_modules/loader-runner/lib/loadLoader.js:36:3)\n    at iteratePitchingLoaders (/Users/beiri/Projects/Laravel/laracasts-council/node_modules/loader-runner/lib/LoaderRunner.js:169:2)\n    at iteratePitchingLoaders (/Users/beiri/Projects/Laravel/laracasts-council/node_modules/loader-runner/lib/LoaderRunner.js:165:10)\n    at /Users/beiri/Projects/Laravel/laracasts-council/node_modules/loader-runner/lib/LoaderRunner.js:173:18\n    at loadLoader (/Users/beiri/Projects/Laravel/laracasts-council/node_modules/loader-runner/lib/loadLoader.js:36:3)\n    at iteratePitchingLoaders (/Users/beiri/Projects/Laravel/laracasts-council/node_modules/loader-runner/lib/LoaderRunner.js:169:2)\n    at runLoaders (/Users/beiri/Projects/Laravel/laracasts-council/node_modules/loader-runner/lib/LoaderRunner.js:362:2)\n    at NormalModule.doBuild (/Users/beiri/Projects/Laravel/laracasts-council/node_modules/webpack/lib/NormalModule.js:180:3)\n    at NormalModule.build (/Users/beiri/Projects/Laravel/laracasts-council/node_modules/webpack/lib/NormalModule.js:273:15)\n    at Compilation.buildModule (/Users/beiri/Projects/Laravel/laracasts-council/node_modules/webpack/lib/Compilation.js:147:10)\n    at /Users/beiri/Projects/Laravel/laracasts-council/node_modules/webpack/lib/Compilation.js:434:9\n    at /Users/beiri/Projects/Laravel/laracasts-council/node_modules/webpack/lib/NormalModuleFactory.js:253:5\n    at /Users/beiri/Projects/Laravel/laracasts-council/node_modules/webpack/lib/NormalModuleFactory.js:99:14\n    at /Users/beiri/Projects/Laravel/laracasts-council/node_modules/tapable/lib/Tapable.js:204:11\n    at NormalModuleFactory.<anonymous> (/Users/beiri/Projects/Laravel/laracasts-council/node_modules/webpack/lib/CompatibilityPlugin.js:52:5)\n    at NormalModuleFactory.applyPluginsAsyncWaterfall (/Users/beiri/Projects/Laravel/laracasts-council/node_modules/tapable/lib/Tapable.js:208:13)\n    at /Users/beiri/Projects/Laravel/laracasts-council/node_modules/webpack/lib/NormalModuleFactory.js:74:11\n    at /Users/beiri/Projects/Laravel/laracasts-council/node_modules/webpack/lib/NormalModuleFactory.js:205:8\n    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)");
 
 /***/ })
 /******/ ]);

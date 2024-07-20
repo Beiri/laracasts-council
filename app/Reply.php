@@ -4,6 +4,7 @@ namespace App;
 
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
+use Stevebauman\Purify\Purify;
 
 class Reply extends Model
 {
@@ -39,6 +40,8 @@ class Reply extends Model
 
         static::created(function ($reply) {
             $reply->thread->increment('replies_count');
+
+            Reputation::award($reply->owner, Reputation::REPLY_POSTED);
         });
 
         static::deleted(function ($reply) {
@@ -141,6 +144,6 @@ class Reply extends Model
      */
     public function getBodyAttribute($body)
     {
-        return \Purify::clean($body);
+        return (new Purify)->clean($body);
     }
 }

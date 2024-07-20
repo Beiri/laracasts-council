@@ -1,53 +1,60 @@
 <template>
-    <div>
-        <div class="level">
-            <img :src="avatar" width="50" height="50" class="mr-1">
+  <div>
+    <div class="level">
+      <img :src="avatar" width="50" height="50" class="mr-1" />
 
-            <h1 v-text="user.name"></h1>
-        </div>
-
-        <form v-if="canUpdate" method="POST" enctype="multipart/form-data">
-            <image-upload name="avatar" class="mr-1" @loaded="onLoad"></image-upload>
-        </form>
-
+      <h1>
+        {{ user.name }}
+        <small v-text="reputation"></small>
+      </h1>
     </div>
+
+    <form v-if="canUpdate" method="POST" enctype="multipart/form-data">
+      <image-upload name="avatar" class="mr-1" @loaded="onLoad"></image-upload>
+    </form>
+  </div>
 </template>
 
 <script>
-    import ImageUpload from './ImageUpload.vue';
+import ImageUpload from "./ImageUpload.vue";
 
-    export default {
-        props: ['user'],
+export default {
+  props: ["user"],
 
-        components: { ImageUpload },
+  components: { ImageUpload },
 
-        data() {
-            return {
-                avatar: this.user.avatar_path
-            };
-        },
+  data() {
+    return {
+      avatar: this.user.avatar_path,
+    };
+  },
 
-        computed: {
-            canUpdate() {
-                return this.authorize(user => user.id === this.user.id);
-            }
-        },
+  computed: {
+    canUpdate() {
+      return this.authorize((user) => user.id === this.user.id);
+    },
 
-        methods: {
-            onLoad(avatar) {
-                this.avatar = avatar.src;
+    reputation() {
+      return this.user.reputation + "XP";
+    },
+  },
 
-                this.persist(avatar.file);
-            },
+  methods: {
+    onLoad(avatar) {
+      this.avatar = avatar.src;
 
-            persist(avatar) {
-                let data = new FormData();
+      this.persist(avatar.file);
+    },
 
-                data.append('avatar', avatar);
+    persist(avatar) {
+      let data = new FormData();
 
-                axios.post(`/api/users/${this.user.name}/avatar`, data)
-                    .then(() => flash('Avatar uploaded!'));
-            }
-        }
-    }
+      data.append("avatar", avatar);
+
+      axios
+        .post(`/api/users/${this.user.name}/avatar`, data)
+        .then(() => flash("Avatar uploaded!"));
+    },
+  },
+};
 </script>

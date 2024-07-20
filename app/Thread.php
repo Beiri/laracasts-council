@@ -7,6 +7,7 @@ use App\Filters\ThreadFilters;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Laravel\Scout\Searchable;
+use Stevebauman\Purify\Purify;
 
 class Thread extends Model
 {
@@ -55,6 +56,8 @@ class Thread extends Model
 
         static::created(function ($thread) {
             $thread->update(['slug' => $thread->title]);
+
+            Reputation::award($thread->creator, Reputation::THREAD_WAS_PUBLISHED);
         });
     }
 
@@ -205,7 +208,7 @@ class Thread extends Model
      */
     public function getBodyAttribute($body)
     {
-        return \Purify::clean($body);
+        return (new Purify())->clean($body);
     }
 
     /**
@@ -230,6 +233,8 @@ class Thread extends Model
     public function markBestReply(Reply $reply)
     {
         $this->update(['best_reply_id' => $reply->id]);
+
+        Reputation::award($reply->owner, Reputation::BEST_REPLY_AWARDED);
     }
 
     /**

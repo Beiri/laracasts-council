@@ -18,7 +18,7 @@
             <button class="btn btn-primary btn-xs level-item" @click="update">Update</button>
             <button class="btn btn-xs level-item" @click="resetForm">Cancel</button>
 
-            @can ('update', $thread)
+            @can('update', $thread)
                 <form action="{{ $thread->path() }}" method="POST" class="ml-a">
                     {{ csrf_field() }}
                     {{ method_field('DELETE') }}
@@ -36,14 +36,12 @@
 <div class="panel panel-default" v-else>
     <div class="panel-heading">
         <div class="level">
-            <img src="{{ $thread->creator->avatar_path }}"
-                 alt="{{ $thread->creator->name }}"
-                 width="25"
-                 height="25"
-                 class="mr-1">
+            <img src="{{ $thread->creator->avatar_path }}" alt="{{ $thread->creator->name }}" width="25"
+                height="25" class="mr-1">
 
             <span class="flex">
-                <a href="{{ route('profile', $thread->creator) }}">{{ $thread->creator->name }}</a> posted: <span v-text="title"></span>
+                <a href="{{ route('profile', $thread->creator) }}">{{ $thread->creator->name }}
+                    ({{ $thread->creator->reputation }})</a> posted: <span v-text="title"></span>
             </span>
         </div>
     </div>
