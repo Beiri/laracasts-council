@@ -4,12 +4,12 @@ namespace Tests\Unit;
 
 use App\Reply;
 use Carbon\Carbon;
-use Illuminate\Foundation\Testing\DatabaseMigrations;
+use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
 
 class ReplyTest extends TestCase
 {
-    use DatabaseMigrations;
+    use RefreshDatabase;
 
     /** @test */
     function it_has_an_owner()
@@ -52,7 +52,6 @@ class ReplyTest extends TestCase
             'Hello <a href="/profiles/Jane-Doe">@Jane-Doe</a>.',
             $reply->body
         );
-
     }
 
     /** @test */

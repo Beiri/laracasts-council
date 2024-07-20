@@ -5,11 +5,11 @@ namespace Tests\Feature;
 use Tests\TestCase;
 use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Facades\Storage;
-use Illuminate\Foundation\Testing\DatabaseMigrations;
+use Illuminate\Foundation\Testing\RefreshDatabase;
 
 class AddAvatarTest extends TestCase
 {
-    use DatabaseMigrations;
+    use RefreshDatabase;
 
     /** @test */
     public function only_members_can_add_avatars()
@@ -41,7 +41,7 @@ class AddAvatarTest extends TestCase
             'avatar' => $file = UploadedFile::fake()->image('avatar.jpg')
         ]);
 
-        $this->assertEquals(asset('avatars/'.$file->hashName()), auth()->user()->avatar_path);
+        $this->assertEquals(asset('avatars/' . $file->hashName()), auth()->user()->avatar_path);
 
         Storage::disk('public')->assertExists('avatars/' . $file->hashName());
     }
