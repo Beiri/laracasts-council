@@ -1,25 +1,31 @@
 <template>
-    <button :class="classes" @click="subscribe">Subscribe</button>
+  <button :class="classes" @click="subscribe">Subscribe</button>
 </template>
 
 <script>
-    export default {
-        props: ['active'],
+export default {
+  props: ["active"],
 
-        computed: {
-            classes() {
-                return ['btn', this.active ? 'btn-primary' : 'btn-default'];
-            }
-        },
+  data() {
+    return {
+      isActive: this.active,
+    };
+  },
 
-        methods: {
-            subscribe() {
-                axios[
-                    (this.active ? 'delete' : 'post')
-                ](location.pathname + '/subscriptions');
+  computed: {
+    classes() {
+      return ["btn", this.isActive ? "btn-primary" : "btn-default"];
+    },
+  },
 
-                this.active = ! this.active;
-            }
-        }
-    }
+  methods: {
+    subscribe() {
+      axios[this.isActive ? "delete" : "post"](
+        location.pathname + "/subscriptions"
+      );
+
+      this.isActive = !this.isActive;
+    },
+  },
+};
 </script>
