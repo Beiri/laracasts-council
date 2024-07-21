@@ -19,13 +19,9 @@ npm run dev
 
 ### Step 2.
 
-Until an administration portal is available, manually insert any number of "channels" (think of these as forum categories) into the "channels" table in your database.
-
-Once finished, clear your server cache, and you're all set to go!
-
-1. Visit: http://council.test/register and register an account.
-1. Edit `config/council.php`, adding the email address of the account you just created.
-1. Visit: http://council.test/admin/channels and add at least one channel.
+1. Visit: `http://council.test/register` and register an account.
+2. Edit `config/council.php`, and add any email address that should be marked as an administrator.
+3. Visit: `http://council.test/admin/channels` to seed your forum with one or more channels.
 
 ### Step 3.
 
