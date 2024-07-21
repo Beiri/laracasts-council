@@ -50,7 +50,7 @@ class InstallCommandTest extends TestCase
         $this->partialMock(['confirm', 'call'], function ($mock) {
             $mock->shouldReceive('confirm')->once()->andReturn(true);
             $mock->shouldReceive('call')->with('key:generate');
-            $mock->shouldReceive('call')->with('migrate')->once();
+            $mock->shouldReceive('call')->with('cache:clear')->once();
         });
 
         $this->artisan('council:install', ['--no-interaction' => true]);
