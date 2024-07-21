@@ -80939,23 +80939,32 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
 
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-    props: ['name', 'value', 'placeholder', 'shouldClear'],
+  props: ["name", "value", "placeholder"],
 
-    mounted: function mounted() {
-        var _this = this;
+  methods: {
+    change: function change(_ref) {
+      var target = _ref.target;
 
-        this.$refs.trix.addEventListener('trix-change', function (e) {
-            _this.$emit('input', e.target.innerHTML);
-        });
-
-        this.$watch('shouldClear', function () {
-            _this.$refs.trix.value = '';
-        });
+      this.$emit("input", target.value);
     }
+  },
+
+  watch: {
+    value: function value(val) {
+      if (val === "") {
+        this.$refs.trix.value = "";
+      }
+    }
+  }
 });
 
 /***/ }),
@@ -81269,6 +81278,9 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     attrs: {
       "input": "trix",
       "placeholder": _vm.placeholder
+    },
+    on: {
+      "trix-change": _vm.change
     }
   })], 1)
 },staticRenderFns: []}
@@ -82204,50 +82216,51 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
 
 
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-    data: function data() {
-        return {
-            body: '',
-            completed: false
-        };
-    },
-    mounted: function mounted() {
-        $('#body').atwho({
-            at: "@",
-            delay: 750,
-            callbacks: {
-                remoteFilter: function remoteFilter(query, callback) {
-                    $.getJSON("/api/users", { name: query }, function (usernames) {
-                        callback(usernames);
-                    });
-                }
-            }
-        });
-    },
-
-
-    methods: {
-        addReply: function addReply() {
-            var _this = this;
-
-            axios.post(location.pathname + '/replies', { body: this.body }).catch(function (error) {
-                flash(error.response.data, 'danger');
-            }).then(function (_ref) {
-                var data = _ref.data;
-
-                _this.body = '';
-                _this.completed = true;
-
-                flash('Your reply has been posted.');
-
-                _this.$emit('created', data);
-            });
+  data: function data() {
+    return {
+      body: ""
+    };
+  },
+  mounted: function mounted() {
+    $("#body").atwho({
+      at: "@",
+      delay: 750,
+      callbacks: {
+        remoteFilter: function remoteFilter(query, callback) {
+          $.getJSON("/api/users", { name: query }, function (usernames) {
+            callback(usernames);
+          });
         }
+      }
+    });
+  },
+
+
+  methods: {
+    addReply: function addReply() {
+      var _this = this;
+
+      axios.post(location.pathname + "/replies", { body: this.body }).catch(function (error) {
+        flash(error.response.data, "danger");
+      }).then(function (_ref) {
+        var data = _ref.data;
+
+        _this.body = "";
+
+        flash("Your reply has been posted.");
+
+        _this.$emit("created", data);
+      });
     }
+  }
 });
 
 /***/ }),
@@ -83917,8 +83930,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   }, [_c('wysiwyg', {
     attrs: {
       "name": "body",
-      "placeholder": "Have something to say?",
-      "shouldClear": _vm.completed
+      "placeholder": "Have something to say?"
     },
     model: {
       value: (_vm.body),
@@ -83935,13 +83947,13 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     on: {
       "click": _vm.addReply
     }
-  }, [_vm._v("Post")])]) : _c('p', {
+  }, [_vm._v("\n      Post\n    ")])]) : _c('p', {
     staticClass: "text-center"
-  }, [_vm._v("\n        Please "), _c('a', {
+  }, [_vm._v("\n    Please "), _c('a', {
     attrs: {
       "href": "/login"
     }
-  }, [_vm._v("sign in")]), _vm._v(" to participate in this\n        discussion.\n    ")])])
+  }, [_vm._v("sign in")]), _vm._v(" to participate in this discussion.\n  ")])])
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 if (false) {
