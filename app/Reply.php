@@ -100,13 +100,13 @@ class Reply extends Model
      */
     public function path()
     {
-        return $this->thread->path() . "#reply-{$this->id}";
+        return $this->thread->path()."#reply-{$this->id}";
     }
 
     /**
      * Access the body attribute.
      *
-     * @param  string $body
+     * @param  string  $body
      * @return string
      */
     public function getBodyAttribute($body)
@@ -117,7 +117,7 @@ class Reply extends Model
     /**
      * Set the body attribute.
      *
-     * @param string $body
+     * @param  string  $body
      */
     public function setBodyAttribute($body)
     {
@@ -139,7 +139,6 @@ class Reply extends Model
     }
 
     /**
-     *
      * Determine if the current reply is marked as the best.
      *
      * @return bool

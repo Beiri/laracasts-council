@@ -14,7 +14,7 @@ class ReplyPolicy
      * Determine if the authenticated user has permission to update a reply.
      *
      * @param  User  $user
-     * @param  Reply $reply
+     * @param  Reply  $reply
      * @return bool
      */
     public function update(User $user, Reply $reply)
@@ -25,7 +25,7 @@ class ReplyPolicy
     /**
      * Determine if the authenticated user has permission to create a new reply.
      *
-     * @param  User $user
+     * @param  User  $user
      * @return bool
      */
     public function create(User $user)

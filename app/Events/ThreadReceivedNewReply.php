@@ -14,7 +14,7 @@ class ThreadReceivedNewReply
     /**
      * Create a new event instance.
      *
-     * @param $reply
+     * @param  $reply
      */
     public function __construct($reply)
     {

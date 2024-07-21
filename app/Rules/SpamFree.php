@@ -2,16 +2,16 @@
 
 namespace App\Rules;
 
-use Exception;
 use App\Inspections\Spam;
+use Exception;
 
 class SpamFree
 {
     /**
      * Determine if the given attribute passes our spam validation.
      *
-     * @param  string $attribute
-     * @param  string $value
+     * @param  string  $attribute
+     * @param  string  $value
      * @return bool
      */
     public function passes($attribute, $value)

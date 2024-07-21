@@ -21,7 +21,7 @@ class PleaseConfirmYourEmail extends Mailable implements ShouldQueue
     /**
      * Create a new mailable instance.
      *
-     * @param \App\User $user
+     * @param  \App\User  $user
      */
     public function __construct($user)
     {

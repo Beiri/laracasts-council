@@ -119,7 +119,7 @@ class Thread extends Model
     /**
      * Add a reply to the thread.
      *
-     * @param  array $reply
+     * @param  array  $reply
      * @return Model
      */
     public function addReply($reply)
@@ -156,8 +156,8 @@ class Thread extends Model
     /**
      * Apply all relevant thread filters.
      *
-     * @param  Builder       $query
-     * @param  ThreadFilters $filters
+     * @param  Builder  $query
+     * @param  ThreadFilters  $filters
      * @return Builder
      */
     public function scopeFilter($query, ThreadFilters $filters)
@@ -168,7 +168,7 @@ class Thread extends Model
     /**
      * Subscribe a user to the current thread.
      *
-     * @param  int|null $userId
+     * @param  int|null  $userId
      * @return $this
      */
     public function subscribe($userId = null)
@@ -183,7 +183,7 @@ class Thread extends Model
     /**
      * Unsubscribe a user from the current thread.
      *
-     * @param int|null $userId
+     * @param  int|null  $userId
      */
     public function unsubscribe($userId = null)
     {
@@ -205,7 +205,7 @@ class Thread extends Model
     /**
      * Determine if the current user is subscribed to the thread.
      *
-     * @return boolean
+     * @return bool
      */
     public function getIsSubscribedToAttribute()
     {
@@ -217,7 +217,7 @@ class Thread extends Model
     /**
      * Determine if the thread has been updated since the user last read it.
      *
-     * @param  User $user
+     * @param  User  $user
      * @return bool
      */
     public function hasUpdatesFor($user)
@@ -240,7 +240,7 @@ class Thread extends Model
     /**
      * Access the body attribute.
      *
-     * @param  string $body
+     * @param  string  $body
      * @return string
      */
     public function getBodyAttribute($body)
@@ -251,7 +251,7 @@ class Thread extends Model
     /**
      * Set the proper slug attribute.
      *
-     * @param string $value
+     * @param  string  $value
      */
     public function setSlugAttribute($value)
     {
@@ -265,7 +265,7 @@ class Thread extends Model
     /**
      * Mark the given reply as the best answer.
      *
-     * @param Reply $reply
+     * @param  Reply  $reply
      */
     public function markBestReply(Reply $reply)
     {
@@ -285,7 +285,7 @@ class Thread extends Model
      */
     public function hasBestReply()
     {
-        return !is_null($this->best_reply_id);
+        return ! is_null($this->best_reply_id);
     }
 
     /**

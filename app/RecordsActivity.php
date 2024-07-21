@@ -2,7 +2,6 @@
 
 namespace App;
 
-
 trait RecordsActivity
 {
     /**
@@ -10,7 +9,9 @@ trait RecordsActivity
      */
     protected static function bootRecordsActivity()
     {
-        if (auth()->guest()) return;
+        if (auth()->guest()) {
+            return;
+        }
 
         foreach (static::getActivitiesToRecord() as $event) {
             static::$event(function ($model) use ($event) {
@@ -36,7 +37,7 @@ trait RecordsActivity
     /**
      * Record new activity for the model.
      *
-     * @param string $event
+     * @param  string  $event
      */
     protected function recordActivity($event)
     {
@@ -59,7 +60,7 @@ trait RecordsActivity
     /**
      * Determine the activity type.
      *
-     * @param  string $event
+     * @param  string  $event
      * @return string
      */
     protected function getActivityType($event)
