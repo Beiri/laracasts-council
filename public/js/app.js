@@ -80888,13 +80888,17 @@ if (false) {
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
+function injectStyle (ssrContext) {
+  if (disposed) return
+  __webpack_require__(535)
+}
 var Component = __webpack_require__(5)(
   /* script */
   __webpack_require__(505),
   /* template */
   __webpack_require__(510),
   /* styles */
-  null,
+  injectStyle,
   /* scopeId */
   null,
   /* moduleIdentifier (server only) */
@@ -80931,6 +80935,10 @@ module.exports = Component.exports
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_trix__ = __webpack_require__(506);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_trix___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_trix__);
+//
+//
+//
+//
 //
 //
 //
@@ -84124,6 +84132,41 @@ if (false) {
 /***/ (function(module, exports) {
 
 throw new Error("Module build failed: ModuleBuildError: Module build failed: Error: Node Sass does not yet support your current environment: OS X Unsupported architecture (arm64) with Unsupported runtime (115)\nFor more information on which environments are supported please see:\nhttps://github.com/sass/node-sass/releases/tag/v4.5.3\n    at module.exports (/Users/beiri/Projects/Laravel/laracasts-council/node_modules/node-sass/lib/binding.js:13:13)\n    at Object.<anonymous> (/Users/beiri/Projects/Laravel/laracasts-council/node_modules/node-sass/lib/index.js:14:35)\n    at Module._compile (node:internal/modules/cjs/loader:1358:14)\n    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)\n    at Module.load (node:internal/modules/cjs/loader:1208:32)\n    at Module._load (node:internal/modules/cjs/loader:1024:12)\n    at Module.require (node:internal/modules/cjs/loader:1233:19)\n    at require (node:internal/modules/helpers:179:18)\n    at Object.<anonymous> (/Users/beiri/Projects/Laravel/laracasts-council/node_modules/sass-loader/lib/loader.js:3:14)\n    at Module._compile (node:internal/modules/cjs/loader:1358:14)\n    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)\n    at Module.load (node:internal/modules/cjs/loader:1208:32)\n    at Module._load (node:internal/modules/cjs/loader:1024:12)\n    at Module.require (node:internal/modules/cjs/loader:1233:19)\n    at require (node:internal/modules/helpers:179:18)\n    at loadLoader (/Users/beiri/Projects/Laravel/laracasts-council/node_modules/loader-runner/lib/loadLoader.js:13:17)\n    at iteratePitchingLoaders (/Users/beiri/Projects/Laravel/laracasts-council/node_modules/loader-runner/lib/LoaderRunner.js:169:2)\n    at iteratePitchingLoaders (/Users/beiri/Projects/Laravel/laracasts-council/node_modules/loader-runner/lib/LoaderRunner.js:165:10)\n    at /Users/beiri/Projects/Laravel/laracasts-council/node_modules/loader-runner/lib/LoaderRunner.js:173:18\n    at loadLoader (/Users/beiri/Projects/Laravel/laracasts-council/node_modules/loader-runner/lib/loadLoader.js:36:3)\n    at iteratePitchingLoaders (/Users/beiri/Projects/Laravel/laracasts-council/node_modules/loader-runner/lib/LoaderRunner.js:169:2)\n    at iteratePitchingLoaders (/Users/beiri/Projects/Laravel/laracasts-council/node_modules/loader-runner/lib/LoaderRunner.js:165:10)\n    at /Users/beiri/Projects/Laravel/laracasts-council/node_modules/loader-runner/lib/LoaderRunner.js:173:18\n    at loadLoader (/Users/beiri/Projects/Laravel/laracasts-council/node_modules/loader-runner/lib/loadLoader.js:36:3)\n    at iteratePitchingLoaders (/Users/beiri/Projects/Laravel/laracasts-council/node_modules/loader-runner/lib/LoaderRunner.js:169:2)\n    at iteratePitchingLoaders (/Users/beiri/Projects/Laravel/laracasts-council/node_modules/loader-runner/lib/LoaderRunner.js:165:10)\n    at /Users/beiri/Projects/Laravel/laracasts-council/node_modules/loader-runner/lib/LoaderRunner.js:173:18\n    at loadLoader (/Users/beiri/Projects/Laravel/laracasts-council/node_modules/loader-runner/lib/loadLoader.js:36:3)\n    at iteratePitchingLoaders (/Users/beiri/Projects/Laravel/laracasts-council/node_modules/loader-runner/lib/LoaderRunner.js:169:2)\n    at runLoaders (/Users/beiri/Projects/Laravel/laracasts-council/node_modules/loader-runner/lib/LoaderRunner.js:362:2)\n    at /Users/beiri/Projects/Laravel/laracasts-council/node_modules/webpack/lib/NormalModule.js:193:19\n    at /Users/beiri/Projects/Laravel/laracasts-council/node_modules/loader-runner/lib/LoaderRunner.js:364:11\n    at /Users/beiri/Projects/Laravel/laracasts-council/node_modules/loader-runner/lib/LoaderRunner.js:170:18\n    at loadLoader (/Users/beiri/Projects/Laravel/laracasts-council/node_modules/loader-runner/lib/loadLoader.js:27:11)\n    at iteratePitchingLoaders (/Users/beiri/Projects/Laravel/laracasts-council/node_modules/loader-runner/lib/LoaderRunner.js:169:2)\n    at iteratePitchingLoaders (/Users/beiri/Projects/Laravel/laracasts-council/node_modules/loader-runner/lib/LoaderRunner.js:165:10)\n    at /Users/beiri/Projects/Laravel/laracasts-council/node_modules/loader-runner/lib/LoaderRunner.js:173:18\n    at loadLoader (/Users/beiri/Projects/Laravel/laracasts-council/node_modules/loader-runner/lib/loadLoader.js:36:3)\n    at iteratePitchingLoaders (/Users/beiri/Projects/Laravel/laracasts-council/node_modules/loader-runner/lib/LoaderRunner.js:169:2)\n    at iteratePitchingLoaders (/Users/beiri/Projects/Laravel/laracasts-council/node_modules/loader-runner/lib/LoaderRunner.js:165:10)\n    at /Users/beiri/Projects/Laravel/laracasts-council/node_modules/loader-runner/lib/LoaderRunner.js:173:18\n    at loadLoader (/Users/beiri/Projects/Laravel/laracasts-council/node_modules/loader-runner/lib/loadLoader.js:36:3)\n    at iteratePitchingLoaders (/Users/beiri/Projects/Laravel/laracasts-council/node_modules/loader-runner/lib/LoaderRunner.js:169:2)\n    at iteratePitchingLoaders (/Users/beiri/Projects/Laravel/laracasts-council/node_modules/loader-runner/lib/LoaderRunner.js:165:10)\n    at /Users/beiri/Projects/Laravel/laracasts-council/node_modules/loader-runner/lib/LoaderRunner.js:173:18\n    at loadLoader (/Users/beiri/Projects/Laravel/laracasts-council/node_modules/loader-runner/lib/loadLoader.js:36:3)\n    at iteratePitchingLoaders (/Users/beiri/Projects/Laravel/laracasts-council/node_modules/loader-runner/lib/LoaderRunner.js:169:2)\n    at runLoaders (/Users/beiri/Projects/Laravel/laracasts-council/node_modules/loader-runner/lib/LoaderRunner.js:362:2)\n    at NormalModule.doBuild (/Users/beiri/Projects/Laravel/laracasts-council/node_modules/webpack/lib/NormalModule.js:180:3)\n    at NormalModule.build (/Users/beiri/Projects/Laravel/laracasts-council/node_modules/webpack/lib/NormalModule.js:273:15)\n    at Compilation.buildModule (/Users/beiri/Projects/Laravel/laracasts-council/node_modules/webpack/lib/Compilation.js:147:10)\n    at /Users/beiri/Projects/Laravel/laracasts-council/node_modules/webpack/lib/Compilation.js:434:9\n    at /Users/beiri/Projects/Laravel/laracasts-council/node_modules/webpack/lib/NormalModuleFactory.js:253:5\n    at /Users/beiri/Projects/Laravel/laracasts-council/node_modules/webpack/lib/NormalModuleFactory.js:99:14\n    at /Users/beiri/Projects/Laravel/laracasts-council/node_modules/tapable/lib/Tapable.js:204:11\n    at NormalModuleFactory.<anonymous> (/Users/beiri/Projects/Laravel/laracasts-council/node_modules/webpack/lib/CompatibilityPlugin.js:52:5)\n    at NormalModuleFactory.applyPluginsAsyncWaterfall (/Users/beiri/Projects/Laravel/laracasts-council/node_modules/tapable/lib/Tapable.js:208:13)\n    at /Users/beiri/Projects/Laravel/laracasts-council/node_modules/webpack/lib/NormalModuleFactory.js:74:11\n    at /Users/beiri/Projects/Laravel/laracasts-council/node_modules/webpack/lib/NormalModuleFactory.js:205:8\n    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)");
+
+/***/ }),
+/* 532 */,
+/* 533 */,
+/* 534 */,
+/* 535 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(536);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(488)("29ea2e84", content, false);
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-157e7a11\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/sass-loader/lib/loader.js!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Wysiwyg.vue", function() {
+     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-157e7a11\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/sass-loader/lib/loader.js!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Wysiwyg.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 536 */
+/***/ (function(module, exports) {
+
+throw new Error("Module build failed: Error: Node Sass does not yet support your current environment: OS X Unsupported architecture (arm64) with Unsupported runtime (115)\nFor more information on which environments are supported please see:\nhttps://github.com/sass/node-sass/releases/tag/v4.5.3\n    at module.exports (/Users/beiri/Projects/Laravel/laracasts-council/node_modules/node-sass/lib/binding.js:13:13)\n    at Object.<anonymous> (/Users/beiri/Projects/Laravel/laracasts-council/node_modules/node-sass/lib/index.js:14:35)\n    at Module._compile (node:internal/modules/cjs/loader:1358:14)\n    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)\n    at Module.load (node:internal/modules/cjs/loader:1208:32)\n    at Module._load (node:internal/modules/cjs/loader:1024:12)\n    at Module.require (node:internal/modules/cjs/loader:1233:19)\n    at require (node:internal/modules/helpers:179:18)\n    at Object.<anonymous> (/Users/beiri/Projects/Laravel/laracasts-council/node_modules/sass-loader/lib/loader.js:3:14)\n    at Module._compile (node:internal/modules/cjs/loader:1358:14)\n    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)\n    at Module.load (node:internal/modules/cjs/loader:1208:32)\n    at Module._load (node:internal/modules/cjs/loader:1024:12)\n    at Module.require (node:internal/modules/cjs/loader:1233:19)\n    at require (node:internal/modules/helpers:179:18)\n    at loadLoader (/Users/beiri/Projects/Laravel/laracasts-council/node_modules/loader-runner/lib/loadLoader.js:13:17)\n    at iteratePitchingLoaders (/Users/beiri/Projects/Laravel/laracasts-council/node_modules/loader-runner/lib/LoaderRunner.js:169:2)\n    at iteratePitchingLoaders (/Users/beiri/Projects/Laravel/laracasts-council/node_modules/loader-runner/lib/LoaderRunner.js:165:10)\n    at /Users/beiri/Projects/Laravel/laracasts-council/node_modules/loader-runner/lib/LoaderRunner.js:173:18\n    at loadLoader (/Users/beiri/Projects/Laravel/laracasts-council/node_modules/loader-runner/lib/loadLoader.js:36:3)\n    at iteratePitchingLoaders (/Users/beiri/Projects/Laravel/laracasts-council/node_modules/loader-runner/lib/LoaderRunner.js:169:2)\n    at iteratePitchingLoaders (/Users/beiri/Projects/Laravel/laracasts-council/node_modules/loader-runner/lib/LoaderRunner.js:165:10)\n    at /Users/beiri/Projects/Laravel/laracasts-council/node_modules/loader-runner/lib/LoaderRunner.js:173:18\n    at loadLoader (/Users/beiri/Projects/Laravel/laracasts-council/node_modules/loader-runner/lib/loadLoader.js:36:3)\n    at iteratePitchingLoaders (/Users/beiri/Projects/Laravel/laracasts-council/node_modules/loader-runner/lib/LoaderRunner.js:169:2)\n    at runLoaders (/Users/beiri/Projects/Laravel/laracasts-council/node_modules/loader-runner/lib/LoaderRunner.js:362:2)\n    at NormalModule.doBuild (/Users/beiri/Projects/Laravel/laracasts-council/node_modules/webpack/lib/NormalModule.js:180:3)\n    at NormalModule.build (/Users/beiri/Projects/Laravel/laracasts-council/node_modules/webpack/lib/NormalModule.js:273:15)\n    at Compilation.buildModule (/Users/beiri/Projects/Laravel/laracasts-council/node_modules/webpack/lib/Compilation.js:147:10)\n    at factoryCallback (/Users/beiri/Projects/Laravel/laracasts-council/node_modules/webpack/lib/Compilation.js:330:11)");
 
 /***/ })
 /******/ ]);

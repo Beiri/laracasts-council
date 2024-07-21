@@ -11,6 +11,10 @@
   </div>
 </template>
 
+<style lang="scss">
+@import "~trix/dist/trix.css";
+</style>
+
 <script>
 import Trix from "trix";
 
