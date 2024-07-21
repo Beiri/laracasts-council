@@ -4,7 +4,7 @@ This is an open source forum that was built and maintained at Laracasts.com.
 
 ## Installation
 
-### Step 1.
+### Step 1
 
 > To run this project, you must have PHP 7 installed as a prerequisite.
 
@@ -17,7 +17,7 @@ php artisan council:install
 npm run dev
 ```
 
-### Step 2.
+### Step 2
 
 Next, boot up a server and visit your forum. If using a tool like Laravel Valet, of course the URL will default to `http://council.test`.
 
