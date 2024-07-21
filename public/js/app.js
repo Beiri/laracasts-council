@@ -78983,14 +78983,14 @@ module.exports = Vue$3;
 var user = window.App.user;
 
 module.exports = {
-    owns: function owns(model) {
-        var prop = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'user_id';
+  owns: function owns(model) {
+    var prop = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : "user_id";
 
-        return model[prop] === user.id;
-    },
-    isAdmin: function isAdmin() {
-        return ['JohnDoe', 'JaneDoe'].includes(user.name);
-    }
+    return model[prop] === user.id;
+  },
+  isAdmin: function isAdmin() {
+    return user.isAdmin;
+  }
 };
 
 /***/ }),
