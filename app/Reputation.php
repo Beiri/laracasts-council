@@ -11,9 +11,9 @@ class Reputation
 
     /**
      * Award reputation points to the given user.
-     * 
-     * @param User $user
-     * $param interm $points
+     *
+     * @param  User  $user
+     *                      $param interm $points
      */
     public static function gain($user, $points)
     {
@@ -22,9 +22,9 @@ class Reputation
 
     /**
      * Reduce reputation points to the given user.
-     * 
-     * @param User $user
-     * $param interm $points
+     *
+     * @param  User  $user
+     *                      $param interm $points
      */
     public static function lose($user, $points)
     {

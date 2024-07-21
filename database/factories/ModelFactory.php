@@ -24,7 +24,6 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
     ];
 });
 
-
 $factory->state(App\User::class, 'unconfirmed', function () {
     return [
         'confirmed' => false
@@ -42,7 +41,7 @@ $factory->define(App\Thread::class, function ($faker) {
             return factory('App\Channel')->create()->id;
         },
         'title' => $title,
-        'body'  => $faker->paragraph,
+        'body' => $faker->paragraph,
         'visits' => 0,
         'slug' => str_slug($title),
         'locked' => false
@@ -56,7 +55,6 @@ $factory->define(App\Channel::class, function ($faker) {
     ];
 });
 
-
 $factory->define(App\Reply::class, function ($faker) {
     return [
         'thread_id' => function () {
@@ -65,7 +63,7 @@ $factory->define(App\Reply::class, function ($faker) {
         'user_id' => function () {
             return factory('App\User')->create()->id;
         },
-        'body'  => $faker->paragraph
+        'body' => $faker->paragraph
     ];
 });
 

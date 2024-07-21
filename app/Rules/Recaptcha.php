@@ -10,7 +10,7 @@ class Recaptcha implements Rule
     /**
      * Determine if the validation rule passes.
      *
-     * @param  string $attribute
+     * @param  string  $attribute
      * @param  mixed  $value
      * @return bool
      */
@@ -35,9 +35,10 @@ class Recaptcha implements Rule
 
     /**
      * Is Recaptcha in test mode?
+     *
      * @method isInTestMode
      *
-     * @return   bool
+     * @return bool
      */
     public static function isInTestMode()
     {

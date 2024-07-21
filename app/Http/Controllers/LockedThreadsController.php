@@ -9,7 +9,7 @@ class LockedThreadsController extends Controller
     /**
      * Lock the given thread.
      *
-     * @param \App\Thread $thread
+     * @param  \App\Thread  $thread
      */
     public function store(Thread $thread)
     {
@@ -19,7 +19,7 @@ class LockedThreadsController extends Controller
     /**
      * Unlock the given thread.
      *
-     * @param \App\Thread $thread
+     * @param  \App\Thread  $thread
      */
     public function destroy(Thread $thread)
     {

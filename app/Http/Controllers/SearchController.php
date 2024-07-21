@@ -9,7 +9,7 @@ class SearchController extends Controller
     /**
      * Show the search results.
      *
-     * @param  \App\Trending $trending
+     * @param  \App\Trending  $trending
      * @return mixed
      */
     public function show(Trending $trending)
