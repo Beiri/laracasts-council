@@ -1,4 +1,4 @@
-# Council
+# Council [![Build Status](https://app.travis-ci.com/Beiri/laracasts-council.svg?token=jPYD7uuvA2BRMucu4vtq&branch=main)](https://app.travis-ci.com/Beiri/laracasts-council)
 
 This is an open source forum that was built and maintained at Laracasts.com.
 
