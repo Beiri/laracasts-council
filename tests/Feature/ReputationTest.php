@@ -109,19 +109,18 @@ class ReputationTest extends TestCase
     public function a_user_earns_points_when_their_reply_is_favorited()
     {
         $this->signIn();
-
         $thread = create('App\Thread');
 
         $reply = $thread->addReply([
-            'user_id' => auth()->id(),
+            'user_id' => create('App\User')->id,
             'body' => 'Some reply'
         ]);
 
         $this->post("/replies/{$reply->id}/favorites");
-
         $total = Reputation::REPLY_POSTED + Reputation::REPLY_FAVORITED;
 
         $this->assertEquals($total, $reply->owner->fresh()->reputation);
+        $this->assertEquals(0, auth()->user()->reputation);
     }
 
     /** @test */
