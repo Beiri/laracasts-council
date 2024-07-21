@@ -12,7 +12,7 @@ class ReputationTest extends TestCase
     use RefreshDatabase;
 
     /** @test */
-    public function a_user_earns_points_when_they_create_a_thread()
+    public function a_user_gains_points_when_they_create_a_thread()
     {
         $thread = create('App\Thread');
 
@@ -34,7 +34,7 @@ class ReputationTest extends TestCase
     }
 
     /** @test */
-    public function a_user_earns_points_when_they_reply_to_a_thread()
+    public function a_user_gains_points_when_they_reply_to_a_thread()
     {
         $thread = create('App\Thread');
 
@@ -61,7 +61,7 @@ class ReputationTest extends TestCase
     }
 
     /** @test */
-    public function a_user_earns_points_when_their_reply_is_marked_as_best()
+    public function a_user_gains_points_when_their_reply_is_marked_as_best()
     {
         $thread = create('App\Thread');
 
@@ -106,7 +106,7 @@ class ReputationTest extends TestCase
     }
 
     /** @test */
-    public function a_user_earns_points_when_their_reply_is_favorited()
+    public function a_user_gains_points_when_their_reply_is_favorited()
     {
         $this->signIn();
         $thread = create('App\Thread');
