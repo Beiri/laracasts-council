@@ -60,7 +60,7 @@ class Thread extends Model
         static::created(function ($thread) {
             $thread->update(['slug' => $thread->title]);
 
-            $thread->notifyMentionedUsers();
+            app(Mentions::class)->notifyMentionedUsers($thread);
 
             Reputation::gain($thread->creator, Reputation::THREAD_WAS_PUBLISHED);
         });
@@ -129,28 +129,6 @@ class Thread extends Model
         event(new ThreadReceivedNewReply($reply));
 
         return $reply;
-    }
-
-    /**
-     * Fetch all mentioned users within the thread's body.
-     *
-     * @return bool
-     */
-    public function notifyMentionedUsers()
-    {
-        preg_match_all('/@([\w\-]+)/', $this->body, $matches);
-
-        if (isset($matches[1])) {
-            User::whereIn('name', $matches[1])
-                ->get()
-                ->each(function ($user) {
-                    $user->notify(new YouWereMentioned($this));
-                });
-
-            return true;
-        }
-
-        return false;
     }
 
     /**
@@ -285,7 +263,7 @@ class Thread extends Model
      */
     public function hasBestReply()
     {
-        return ! is_null($this->best_reply_id);
+        return !is_null($this->best_reply_id);
     }
 
     /**
