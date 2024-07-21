@@ -81621,63 +81621,86 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-    props: ['reply'],
+  props: ["reply"],
 
-    components: { Favorite: __WEBPACK_IMPORTED_MODULE_0__Favorite_vue___default.a },
+  components: { Favorite: __WEBPACK_IMPORTED_MODULE_0__Favorite_vue___default.a },
 
-    data: function data() {
-        return {
-            editing: false,
-            id: this.reply.id,
-            body: this.reply.body,
-            isBest: this.reply.isBest
-        };
-    },
-
-
-    computed: {
-        ago: function ago() {
-            return __WEBPACK_IMPORTED_MODULE_1_moment___default.a(this.reply.created_at).fromNow() + '...';
-        }
-    },
-
-    created: function created() {
-        var _this = this;
-
-        window.events.$on('best-reply-selected', function (id) {
-            _this.isBest = id === _this.id;
-        });
-    },
+  data: function data() {
+    return {
+      editing: false,
+      id: this.reply.id,
+      body: this.reply.body,
+      isBest: this.reply.isBest
+    };
+  },
 
 
-    methods: {
-        update: function update() {
-            axios.patch('/replies/' + this.id, {
-                body: this.body
-            }).catch(function (error) {
-                flash(error.response.data, 'danger');
-            });
-
-            this.editing = false;
-
-            flash('Updated!');
-        },
-        destroy: function destroy() {
-            axios.delete('/replies/' + this.id);
-
-            this.$emit('deleted', this.id);
-        },
-        markBestReply: function markBestReply() {
-            axios.post('/replies/' + this.id + '/best');
-
-            window.events.$emit('best-reply-selected', this.id);
-        }
+  computed: {
+    ago: function ago() {
+      return __WEBPACK_IMPORTED_MODULE_1_moment___default.a(this.reply.created_at).fromNow() + "...";
     }
+  },
+
+  created: function created() {
+    var _this = this;
+
+    window.events.$on("best-reply-selected", function (id) {
+      _this.isBest = id === _this.id;
+    });
+  },
+
+
+  methods: {
+    update: function update() {
+      axios.patch("/replies/" + this.id, {
+        body: this.body
+      }).catch(function (error) {
+        flash(error.response.data, "danger");
+      });
+
+      this.editing = false;
+
+      flash("Updated!");
+    },
+    cancel: function cancel() {
+      this.editing = false;
+      this.body = this.reply.body;
+    },
+    destroy: function destroy() {
+      axios.delete("/replies/" + this.id);
+
+      this.$emit("deleted", this.id);
+    },
+    markBestReply: function markBestReply() {
+      axios.post("/replies/" + this.id + "/best");
+
+      window.events.$emit("best-reply-selected", this.id);
+    }
+  }
 });
 
 /***/ }),
@@ -82078,7 +82101,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     domProps: {
       "textContent": _vm._s(_vm.reply.owner.name)
     }
-  }), _vm._v(" said "), _c('span', {
+  }), _vm._v("\n        said "), _c('span', {
     domProps: {
       "textContent": _vm._s(_vm.ago)
     }
@@ -82110,11 +82133,9 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       "type": "button"
     },
     on: {
-      "click": function($event) {
-        _vm.editing = false
-      }
+      "click": _vm.cancel
     }
-  }, [_vm._v("Cancel")])])]) : _c('div', {
+  }, [_vm._v("\n          Cancel\n        ")])])]) : _c('div', {
     domProps: {
       "innerHTML": _vm._s(_vm.body)
     }
@@ -82127,17 +82148,17 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
         _vm.editing = true
       }
     }
-  }, [_vm._v("Edit")]) : _vm._e(), _vm._v(" "), _c('button', {
+  }, [_vm._v("\n        Edit\n      ")]) : _vm._e(), _vm._v(" "), _c('button', {
     staticClass: "btn btn-xs btn-danger mr-1",
     on: {
       "click": _vm.destroy
     }
-  }, [_vm._v("Delete")])]) : _vm._e(), _vm._v(" "), (_vm.authorize('owns', _vm.reply.thread)) ? _c('button', {
+  }, [_vm._v("\n        Delete\n      ")])]) : _vm._e(), _vm._v(" "), (_vm.authorize('owns', _vm.reply.thread)) ? _c('button', {
     staticClass: "btn btn-xs btn-default ml-a",
     on: {
       "click": _vm.markBestReply
     }
-  }, [_vm._v("Best Reply?")]) : _vm._e()]) : _vm._e()])
+  }, [_vm._v("\n      Best Reply?\n    ")]) : _vm._e()]) : _vm._e()])
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 if (false) {
