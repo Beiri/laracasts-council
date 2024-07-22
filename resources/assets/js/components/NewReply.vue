@@ -1,6 +1,17 @@
 <template>
   <div>
-    <div v-if="signedIn">
+    <div v-if="!signedIn">
+      <p class="text-center">
+        Please <a href="/login">sign in</a> to participate in this discussion.
+      </p>
+    </div>
+
+    <div v-else-if="!confirmed">
+      To participate in this thread, please check your email and confirm your
+      account.
+    </div>
+
+    <div v-else>
       <div class="form-group">
         <wysiwyg
           name="body"
@@ -13,10 +24,6 @@
         Post
       </button>
     </div>
-
-    <p class="text-center" v-else>
-      Please <a href="/login">sign in</a> to participate in this discussion.
-    </p>
   </div>
 </template>
 
@@ -29,6 +36,12 @@ export default {
     return {
       body: "",
     };
+  },
+
+  computed: {
+    confirmed() {
+      return window.App.user.confirmed;
+    },
   },
 
   mounted() {

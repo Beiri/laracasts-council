@@ -82248,6 +82248,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -82258,6 +82265,14 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
       body: ""
     };
   },
+
+
+  computed: {
+    confirmed: function confirmed() {
+      return window.App.user.confirmed;
+    }
+  },
+
   mounted: function mounted() {
     $("#body").atwho({
       at: "@",
@@ -83954,7 +83969,7 @@ $.fn.atwho.debug = false;
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', [(_vm.signedIn) ? _c('div', [_c('div', {
+  return _c('div', [(!_vm.signedIn) ? _c('div', [_vm._m(0)]) : (!_vm.confirmed) ? _c('div', [_vm._v("\n    To participate in this thread, please check your email and confirm your\n    account.\n  ")]) : _c('div', [_c('div', {
     staticClass: "form-group"
   }, [_c('wysiwyg', {
     attrs: {
@@ -83976,14 +83991,16 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     on: {
       "click": _vm.addReply
     }
-  }, [_vm._v("\n      Post\n    ")])]) : _c('p', {
+  }, [_vm._v("\n      Post\n    ")])])])
+},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('p', {
     staticClass: "text-center"
-  }, [_vm._v("\n    Please "), _c('a', {
+  }, [_vm._v("\n      Please "), _c('a', {
     attrs: {
       "href": "/login"
     }
-  }, [_vm._v("sign in")]), _vm._v(" to participate in this discussion.\n  ")])])
-},staticRenderFns: []}
+  }, [_vm._v("sign in")]), _vm._v(" to participate in this discussion.\n    ")])
+}]}
 module.exports.render._withStripped = true
 if (false) {
   module.hot.accept()
