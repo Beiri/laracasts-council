@@ -31,13 +31,16 @@
 .channel-dropdown {
   padding: 0;
 }
+
 .input-wrapper {
   padding: 0.5rem 1rem;
 }
+
 .channel-list {
   max-height: 400px;
   overflow: auto;
   margin-bottom: 0;
+
   .list-group-item {
     border-radius: 0;
     border-left: none;
@@ -49,18 +52,20 @@
 <script>
 export default {
   props: ["channels"],
+
   data() {
     return {
       toggle: false,
       filter: "",
     };
   },
+
   computed: {
     filteredThreads() {
       return this.channels.filter((channel) => {
         return channel.name
           .toLowerCase()
-          .includes(this.filter.toLocaleLowerCase());
+          .startsWith(this.filter.toLocaleLowerCase());
       });
     },
   },
