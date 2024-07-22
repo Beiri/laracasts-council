@@ -19,7 +19,7 @@
         />
       </div>
       <ul class="list-group channel-list">
-        <li class="list-group-item" v-for="channel in filteredThreads">
+        <li class="list-group-item" v-for="channel in filteredChannels">
           <a :href="`/threads/${channel.slug}`" v-text="channel.name"></a>
         </li>
       </ul>
@@ -61,7 +61,7 @@ export default {
   },
 
   computed: {
-    filteredThreads() {
+    filteredChannels() {
       return this.channels.filter((channel) => {
         return channel.name
           .toLowerCase()
