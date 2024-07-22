@@ -90,8 +90,11 @@ class ThreadsController extends Controller
      */
     public function show($channel, Thread $thread, Trending $trending)
     {
+        /** @var \App\User $user */
+        $user = auth()->user();
+
         if (auth()->check()) {
-            auth()->user()->read($thread);
+            $user->read($thread);
         }
 
         $trending->push($thread);
@@ -148,7 +151,9 @@ class ThreadsController extends Controller
      */
     protected function getThreads(Channel $channel, ThreadFilters $filters)
     {
-        $threads = Thread::latest()->with('channel')->filter($filters);
+        $threads = Thread::orderBy('pinned', 'DESC')
+            ->latest()
+            ->filter($filters);
 
         if ($channel->exists) {
             $threads->where('channel_id', $channel->id);
