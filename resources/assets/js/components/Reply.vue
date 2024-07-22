@@ -20,12 +20,12 @@
 
     <div class="panel-body">
       <div v-if="editing">
-        <form @submit="update">
+        <form @submit.prevent="update">
           <div class="form-group">
             <wysiwyg v-model="body"></wysiwyg>
           </div>
 
-          <button class="btn btn-xs btn-primary">Update</button>
+          <button class="btn btn-xs btn-primary" type="submit">Update</button>
           <button class="btn btn-xs btn-link" @click="cancel" type="button">
             Cancel
           </button>
