@@ -32,7 +32,7 @@
         </form>
       </div>
 
-      <div v-else v-html="body"></div>
+      <div ref="reply-body" v-else v-html="body"></div>
     </div>
 
     <div
@@ -87,6 +87,18 @@ export default {
     window.events.$on("best-reply-selected", (id) => {
       this.isBest = id === this.id;
     });
+  },
+
+  mounted() {
+    this.highlight(this.$refs["reply-body"]);
+  },
+
+  watch: {
+    editing() {
+      if (!this.editing) {
+        setTimeout(() => this.highlight(this.$refs["reply-body"]), 50);
+      }
+    },
   },
 
   methods: {

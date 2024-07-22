@@ -1,7 +1,6 @@
+window._ = require("lodash");
 
-window._ = require('lodash');
-
-import InstantSearch from 'vue-instantsearch';
+import InstantSearch from "vue-instantsearch";
 
 /**
  * We'll load jQuery and the Bootstrap jQuery plugin which provides support
@@ -9,9 +8,9 @@ import InstantSearch from 'vue-instantsearch';
  * code may be modified to fit the specific needs of your application.
  */
 
-window.$ = window.jQuery = require('jquery');
+window.$ = window.jQuery = require("jquery");
 
-require('bootstrap-sass');
+require("bootstrap-sass");
 
 /**
  * Vue is a modern JavaScript library for building interactive web interfaces
@@ -19,23 +18,39 @@ require('bootstrap-sass');
  * and simple, leaving you to focus on building your next great project.
  */
 
-window.Vue = require('vue');
+window.Vue = require("vue");
 
 Vue.use(InstantSearch);
 
-let authorizations = require('./authorizations');
+let authorizations = require("./authorizations");
 
 Vue.prototype.authorize = function (...params) {
-    if (! window.App.signedIn) return false;
+  if (!window.App.signedIn) return false;
 
-    if (typeof params[0] === 'string') {
-        return authorizations[params[0]](params[1]);
-    }
+  if (typeof params[0] === "string") {
+    return authorizations[params[0]](params[1]);
+  }
 
-    return params[0](window.App.user);
+  return params[0](window.App.user);
 };
 
 Vue.prototype.signedIn = window.App.signedIn;
+
+/**
+ * We'll load highlight.js library which allows us to easily enable syntax
+ * highlighting within <pre><code> blocks. It also allows highlighting
+ * within custom html blocks with a wide variety of color schemes.
+ */
+
+let Highlighter = require("highlight.js");
+require("highlight.js/styles/foundation.css"); // load Foundation style
+
+Vue.prototype.highlight = function (block) {
+  if (!block) return;
+  block.querySelectorAll("pre").forEach(function (node) {
+    Highlighter.highlightBlock(node);
+  });
+};
 
 /**
  * We'll load the axios HTTP library which allows us to easily issue requests
@@ -43,15 +58,15 @@ Vue.prototype.signedIn = window.App.signedIn;
  * CSRF token as a header based on the value of the "XSRF" token cookie.
  */
 
-window.axios = require('axios');
+window.axios = require("axios");
 
 window.axios.defaults.headers.common = {
-    'X-CSRF-TOKEN': window.App.csrfToken,
-    'X-Requested-With': 'XMLHttpRequest'
+  "X-CSRF-TOKEN": window.App.csrfToken,
+  "X-Requested-With": "XMLHttpRequest",
 };
 
 window.events = new Vue();
 
-window.flash = function (message, level = 'success') {
-    window.events.$emit('flash', { message, level });
+window.flash = function (message, level = "success") {
+  window.events.$emit("flash", { message, level });
 };

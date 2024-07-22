@@ -1,56 +1,68 @@
 <script>
-    import Replies from '../components/Replies.vue';
-    import SubscribeButton from '../components/SubscribeButton.vue';
+import Replies from "../components/Replies.vue";
+import SubscribeButton from "../components/SubscribeButton.vue";
 
-    export default {
-        props: ['thread'],
+export default {
+  props: ["thread"],
 
-        components: {Replies, SubscribeButton},
+  components: { Replies, SubscribeButton },
 
-        data () {
-            return {
-                repliesCount: this.thread.replies_count,
-                locked: this.thread.locked,
-                title: this.thread.title,
-                body: this.thread.body,
-                form: {},
-                editing: false
-            };
-        },
+  data() {
+    return {
+      repliesCount: this.thread.replies_count,
+      locked: this.thread.locked,
+      title: this.thread.title,
+      body: this.thread.body,
+      form: {},
+      editing: false,
+    };
+  },
 
-        created () {
-            this.resetForm();
-        },
+  created() {
+    this.resetForm();
+  },
 
-        methods: {
-            toggleLock () {
-                let uri = `/locked-threads/${this.thread.slug}`;
+  mounted() {
+    this.highlight(this.$refs.question);
+  },
 
-                axios[this.locked ? 'delete' : 'post'](uri);
+  watch: {
+    editing() {
+      if (!this.editing) {
+        setTimeout(() => this.highlight(this.$refs.question), 100);
+      }
+    },
+  },
 
-                this.locked = ! this.locked;
-            },
+  methods: {
+    toggleLock() {
+      let uri = `/locked-threads/${this.thread.slug}`;
 
-            update () {
-                let uri = `/threads/${this.thread.channel.slug}/${this.thread.slug}`;
+      axios[this.locked ? "delete" : "post"](uri);
 
-                axios.patch(uri, this.form).then(() => {
-                    this.editing = false;
-                    this.title = this.form.title;
-                    this.body = this.form.body;
+      this.locked = !this.locked;
+    },
 
-                    flash('Your thread has been updated.');
-                })
-            },
+    update() {
+      let uri = `/threads/${this.thread.channel.slug}/${this.thread.slug}`;
 
-            resetForm () {
-                this.form = {
-                    title: this.thread.title,
-                    body: this.thread.body
-                };
+      axios.patch(uri, this.form).then(() => {
+        this.editing = false;
+        this.title = this.form.title;
+        this.body = this.form.body;
 
-                this.editing = false;
-            }
-        }
-    }
+        flash("Your thread has been updated.");
+      });
+    },
+
+    resetForm() {
+      this.form = {
+        title: this.thread.title,
+        body: this.thread.body,
+      };
+
+      this.editing = false;
+    },
+  },
+};
 </script>
