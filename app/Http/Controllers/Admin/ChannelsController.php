@@ -31,7 +31,7 @@ class ChannelsController extends Controller
 
     /**
      * Show the form to edit an existing channel.
-     * 
+     *
      * @return \Illuminate\Http\Response
      */
     public function edit(Channel $channel)
@@ -41,7 +41,7 @@ class ChannelsController extends Controller
 
     /**
      * Update an existing channel.
-     * 
+     *
      * @return \Illuminate\
      */
     public function update(Channel $channel)

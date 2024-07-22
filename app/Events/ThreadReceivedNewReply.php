@@ -12,7 +12,7 @@ class ThreadReceivedNewReply
     /**
      * The reply that was posted.
      *
-     * @param \App\Reply $reply
+     * @param  \App\Reply  $reply
      */
     public $reply;
 
