@@ -53,6 +53,7 @@ Route::get('/profiles/{user}/notifications', 'UserNotificationsController@index'
 Route::delete('/profiles/{user}/notifications/{notification}', 'UserNotificationsController@destroy')->name('user-notification.destroy');
 
 Route::get('/register/confirm', 'Auth\RegisterConfirmationController@index')->name('register.confirm');
+Route::get('api/channels', 'Api\ChannelsController@index');
 
 Route::get('api/users', 'Api\UsersController@index')->name('api.users');
 Route::post('api/users/{user}/avatar', 'Api\UserAvatarController@store')->middleware('auth')->name('avatar');
