@@ -2,7 +2,6 @@
 
 namespace Tests\Feature;
 
-use App\Channel;
 use App\Thread;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
@@ -10,6 +9,20 @@ use Tests\TestCase;
 class PinThreadsTest extends TestCase
 {
     use RefreshDatabase;
+
+    /** @test */
+    public function regular_users_cannot_pin_threads()
+    {
+        $this->withExceptionHandling();
+
+        $this->signIn();
+
+        $thread = create('App\Thread', ['user_id' => auth()->id()]);
+
+        $this->post(route('pinned-threads.store', $thread))->assertStatus(403);
+
+        $this->assertFalse($thread->fresh()->pinned, 'Failed asserting that the thread was unpinned.');
+    }
 
     /** @test */
     public function administrators_can_pin_threads()
