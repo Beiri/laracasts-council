@@ -2,7 +2,6 @@
 
 namespace App\Providers;
 
-use App\Trending;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\ServiceProvider;
 
@@ -13,7 +12,7 @@ class AppServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function boot(Trending $trending)
+    public function boot()
     {
         Validator::extend('spamfree', 'App\Rules\SpamFree@passes');
     }
