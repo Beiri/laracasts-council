@@ -108,7 +108,7 @@ class InstallCommand extends Command
      */
     protected function createEnvFile()
     {
-        if (!file_exists('.env')) {
+        if (! file_exists('.env')) {
             copy('.env.example', '.env');
 
             $this->line('.env file successfully created');
@@ -118,13 +118,13 @@ class InstallCommand extends Command
     /**
      * Migrate the db with the new credentials.
      *
-     * @param array $credentials
+     * @param  array  $credentials
      * @return void
      */
     protected function migrateDatabaseWithFreshCredentials($credentials)
     {
         foreach ($credentials as $key => $value) {
-            $configKey = strtolower(str_replace("DB_", "", $key));
+            $configKey = strtolower(str_replace('DB_', '', $key));
 
             if ($configKey === 'password' && $value == 'null') {
                 config(["database.connections.mysql.{$configKey}" => '']);
@@ -142,7 +142,7 @@ class InstallCommand extends Command
      * Prompt the user for optional input but hide the answer from the console.
      *
      * @param  string  $question
-     * @param  bool    $fallback
+     * @param  bool  $fallback
      * @return string
      */
     public function askHiddenWithDefault($question, $fallback = true)
