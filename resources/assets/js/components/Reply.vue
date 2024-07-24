@@ -25,7 +25,7 @@
             <h5 class="font-normal">
               <a
                 class="text-blue font-bold link"
-                :href="'/profiles/' + reply.owner.name"
+                :href="'/profiles/' + reply.owner.username"
                 v-text="reply.owner.name"
               ></a>
             </h5>
