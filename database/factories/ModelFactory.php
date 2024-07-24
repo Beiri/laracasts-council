@@ -54,6 +54,7 @@ $factory->define(App\Channel::class, function ($faker) {
         'name' => $faker->unique()->word,
         'description' => $faker->sentence,
         'archived' => false,
+        'color' => $faker->hexcolor,
     ];
 });
 
