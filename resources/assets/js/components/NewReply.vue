@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="new-reply">
     <div v-if="!signedIn">
       <p class="text-center">
         Please <a href="/login">sign in</a> to participate in this discussion.
@@ -49,8 +49,8 @@ export default {
       at: "@",
       delay: 750,
       callbacks: {
-        remoteFilter: function (query, callback) {
-          $.getJSON("/api/users", { name: query }, function (usernames) {
+        remoteFilter: function(query, callback) {
+          $.getJSON("/api/users", { name: query }, function(usernames) {
             callback(usernames);
           });
         },
@@ -76,3 +76,11 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.new-reply {
+  padding: 15px;
+  background-color: #fff;
+  border: 1px solid #e3e3e3;
+}
+</style>
