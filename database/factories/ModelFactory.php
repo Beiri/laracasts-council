@@ -60,7 +60,7 @@ $factory->state(App\Thread::class, 'from_existing_channels_and_users', function 
             return \App\Channel::all()->random()->id;
         },
         'title' => $title,
-        'body'  => $faker->paragraph,
+        'body' => $faker->paragraph,
         'visits' => $faker->numberBetween(0, 35),
         'slug' => str_slug($title),
         'locked' => $faker->boolean(15)

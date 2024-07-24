@@ -92,9 +92,9 @@ class SampleDataSeeder extends Seeder
     }
 
     /**
-     * @param $model
-     * @param $event_type
-     * @param $user_id
+     * @param  $model
+     * @param  $event_type
+     * @param  $user_id
      *
      * @throws ReflectionException
      */
