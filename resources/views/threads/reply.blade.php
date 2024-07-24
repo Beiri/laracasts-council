@@ -4,7 +4,7 @@
             <div class="level">
                 <h5 class="flex">
                     <a href="{{ route('profile', $reply->owner) }}">
-                        {{ $reply->owner->name }}
+                        {{ $reply->owner->username }}
                     </a> said {{ $reply->created_at->diffForHumans() }}...
                 </h5>
 
@@ -29,7 +29,7 @@
             <div v-else v-text="body"></div>
         </div>
 
-        @can ('update', $reply)
+        @can('update', $reply)
             <div class="panel-footer level">
                 <button class="btn btn-xs mr-1" @click="editing = true">Edit</button>
                 <button class="btn btn-xs btn-danger mr-1" @click="destroy">Delete</button>
