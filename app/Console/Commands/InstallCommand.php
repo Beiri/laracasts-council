@@ -108,7 +108,7 @@ class InstallCommand extends Command
      */
     protected function createEnvFile()
     {
-        if (! file_exists('.env')) {
+        if (!file_exists('.env')) {
             copy('.env.example', '.env');
 
             $this->line('.env file successfully created');
@@ -151,6 +151,6 @@ class InstallCommand extends Command
 
         $question->setHidden(true)->setHiddenFallback($fallback);
 
-        $password = $this->output->askQuestion($question);
+        return $this->output->askQuestion($question);
     }
 }
