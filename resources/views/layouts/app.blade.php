@@ -50,7 +50,9 @@
 
         <flash message="{{ session('flash') }}"></flash>
 
-        @include('modals.all')
+        <div v-cloak>
+            @include('modals.all')
+        </div>
     </div>
 
     <!-- Scripts -->
