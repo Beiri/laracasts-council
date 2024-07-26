@@ -1,8 +1,10 @@
 <template>
-  <activity-layout :last="last">
+  <activity-layout>
     <span slot="activity">
-      added a&nbsp;<a class="mr-1 text-blue" :href="activity.subject.path"
-        ><strong>reply</strong></a
+      added a&nbsp;<a
+        class="mr-1 text-blue font-bold"
+        :href="activity.subject.path"
+        >reply</a
       >
       {{ humanTime(activity.subject.created_at) }} in:
     </span>
@@ -11,6 +13,7 @@
       <a class="text-blue font-bold mb-4" :href="activity.subject.thread.path"
         >"{{ activity.subject.thread.title }}"</a
       >
+
       <p class="text-2xs text-grey-darkest font-medium mb-4">
         Posted By:
         <a :href="activity.subject.thread.creator.username" class="text-blue">{{
@@ -27,6 +30,7 @@
           <highlight :content="activity.subject.body" />
         </div>
       </div>
+
       <div class="flex items-center py-1 text-xs text-grey-darkest">
         &#8943;
         <a class="ml-1 text-2xs text-blue" :href="activity.subject.path"
@@ -36,6 +40,7 @@
     </div>
 
     <div slot="badges" class="flex items-center mx-6 mb-6 text-sm">
+      <!-- Favorites Badge -->
       <div class="flex items-center mr-2 text-xs">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -52,16 +57,20 @@
             />
           </g>
         </svg>
+
         <span class="text-grey-darker text-2xs font-semibold  ml-1"
           >{{ activity.subject.favoritesCount }} Favorite(s)</span
         >
       </div>
+
+      <!-- Best Answer Badge -->
       <div
         v-if="activity.subject.isBest"
         class="text-grey-darker text-2xs font-semibold flex items-center mr-2"
       >
         <span class="mr-2 font-bold flex items-center">
           <span class="ml-2 mr-1">Best Answer!</span>
+
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="16"
@@ -76,6 +85,8 @@
           </svg>
         </span>
       </div>
+
+      <!-- XP Badge -->
       <div
         class="flex items-center w-auto h-4 px-2 bg-green rounded font-semibold text-2xs text-white"
       >
@@ -86,8 +97,11 @@
 </template>
 
 <script>
-import activity from "../mixins/activity";
 export default {
-  mixins: [activity],
+  props: {
+    activity: {
+      required: true,
+    },
+  },
 };
 </script>

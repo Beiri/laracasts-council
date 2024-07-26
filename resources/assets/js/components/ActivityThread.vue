@@ -11,6 +11,7 @@
       <a class="text-blue font-bold mb-4" :href="activity.subject.path"
         >"{{ activity.subject.title }}"</a
       >
+
       <p class="text-2xs text-grey-darkest font-medium mb-4">
         Posted By:
         <a :href="activity.subject.creator.username" class="text-blue">
@@ -27,6 +28,7 @@
           <highlight :content="activity.subject.body" />
         </div>
       </div>
+
       <div class="flex items-center py-1 text-xs text-grey-darkest">
         &#8943;
         <a class="ml-1 text-2xs text-blue" :href="activity.subject.path"
@@ -36,6 +38,7 @@
     </div>
 
     <div slot="badges" class="flex items-center mx-6 mb-6 text-sm">
+      <!-- Replies Count Badge -->
       <div
         v-if="activity.subject.replies_count > 0"
         class="text-grey-darker text-2xs font-semibold flex items-center mr-4"
@@ -55,14 +58,19 @@
             />
           </g>
         </svg>
+
         {{ activity.subject.replies_count }} Reply(s)
       </div>
     </div>
   </activity-layout>
 </template>
+
 <script>
-import activity from "../mixins/activity";
 export default {
-  mixins: [activity],
+  props: {
+    activity: {
+      required: true,
+    },
+  },
 };
 </script>

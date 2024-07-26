@@ -3,6 +3,7 @@ window._ = require("lodash");
 import Vue from "vue";
 import InstantSearch from "vue-instantsearch";
 import VModal from "vue-js-modal";
+import moment from "moment";
 
 /**
  * We'll load jQuery and the Bootstrap jQuery plugin which provides support
@@ -38,6 +39,7 @@ Vue.prototype.authorize = function(...params) {
 };
 
 Vue.prototype.signedIn = window.App.signedIn;
+Vue.prototype.humanTime = (timestamp) => moment(timestamp).fromNow();
 
 /**
  * We'll load the axios HTTP library which allows us to easily issue requests

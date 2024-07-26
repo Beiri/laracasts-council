@@ -5,6 +5,7 @@
         <span class="text-xs mr-2" aria-hidden="true">&laquo; Previous</span>
       </a>
     </li>
+
     <li v-show="nextUrl" class="inline">
       <a href="#" aria-label="Next" rel="next" @click.prevent="page++">
         <span class="text-xs" aria-hidden="true">Next &raquo;</span>

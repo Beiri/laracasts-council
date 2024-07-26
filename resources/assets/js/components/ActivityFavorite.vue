@@ -1,5 +1,5 @@
 <template>
-  <activity-layout :last="last">
+  <activity-layout>
     <span slot="activity">
       favorited a
       <a class="text-blue" :href="activity.favoritedModel.path"
@@ -12,6 +12,7 @@
       <a class="text-blue font-bold mb-4" :href="activity.favoritedModel.path"
         >"{{ activity.favoritedModel.thread.title }}"</a
       >
+
       <p class="text-2xs text-grey-darkest font-medium mb-4">
         Posted By:
         <a
@@ -30,6 +31,7 @@
           <highlight :content="activity.favoritedModel.body" />
         </div>
       </div>
+
       <div class="flex items-center py-1 text-xs text-grey-darkest">
         &#8943;
         <a class="ml-1 text-2xs text-blue" :href="activity.favoritedModel.path"
@@ -39,9 +41,13 @@
     </div>
   </activity-layout>
 </template>
+
 <script>
-import activity from "../mixins/activity";
 export default {
-  mixins: [activity],
+  props: {
+    activity: {
+      required: true,
+    },
+  },
 };
 </script>
