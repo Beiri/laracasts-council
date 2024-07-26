@@ -44,6 +44,7 @@ class Activity extends Model
                 $favoritedModel = Reply::find($subject->favorited_id);
             }
         }
+
         return $favoritedModel;
     }
 

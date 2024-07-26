@@ -46,7 +46,7 @@ class Trending
     {
         $trending = Cache::get($this->cacheKey(), collect());
 
-        if (!isset($trending[$thread->id])) {
+        if (! isset($trending[$thread->id])) {
             return 0;
         }
 
