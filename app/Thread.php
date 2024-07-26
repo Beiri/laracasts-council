@@ -82,7 +82,7 @@ class Thread extends Model
      */
     public function getPathAttribute()
     {
-        if (!$this->channel) {
+        if (! $this->channel) {
             return '';
         }
 
@@ -208,7 +208,7 @@ class Thread extends Model
      */
     public function getIsSubscribedToAttribute()
     {
-        if (!auth()->id()) {
+        if (! auth()->id()) {
             return false;
         }
 
@@ -298,7 +298,7 @@ class Thread extends Model
      */
     public function hasBestReply()
     {
-        return !is_null($this->best_reply_id);
+        return ! is_null($this->best_reply_id);
     }
 
     /**
