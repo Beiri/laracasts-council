@@ -1,5 +1,5 @@
 <template>
-  <div @mouseover="active = true" @mouseout="active = false">
+  <div @mouseover="activate" @mouseout="deactivate">
     <div
       class="rounded-full bg-blue-darkest w-10 h-10 flex items-center justify-center mr-4 cursor-pointer relative z-10"
     >
@@ -68,9 +68,13 @@
 </template>
 
 <script>
+import activation from "../mixins/activation";
+
 export default {
+  mixins: [activation],
+
   data() {
-    return { notifications: false, active: false };
+    return { notifications: false };
   },
 
   created() {

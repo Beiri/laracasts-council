@@ -1,8 +1,8 @@
 <template>
   <div
-    @mouseover="active = true"
-    @mouseout="active = false"
-    class="relative cursor-pointer relative z-10"
+    @mouseover="activate"
+    @mouseout="deactivate"
+    class="relative cursor-pointer z-10"
   >
     <slot name="heading"></slot>
 
@@ -21,11 +21,9 @@
 </template>
 
 <script>
+import activation from "../mixins/activation";
+
 export default {
-  data() {
-    return {
-      active: false,
-    };
-  },
+  mixins: [activation],
 };
 </script>
