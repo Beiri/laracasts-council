@@ -12,7 +12,7 @@ class ReplyTest extends TestCase
     use RefreshDatabase;
 
     /** @test */
-    function it_has_an_owner()
+    public function it_has_an_owner()
     {
         $reply = create(\App\Reply::class);
 
@@ -20,7 +20,7 @@ class ReplyTest extends TestCase
     }
 
     /** @test */
-    function it_knows_if_it_was_just_published()
+    public function it_knows_if_it_was_just_published()
     {
         $reply = create(\App\Reply::class);
 
@@ -32,7 +32,7 @@ class ReplyTest extends TestCase
     }
 
     /** @test */
-    function it_wraps_mentioned_usernames_in_the_body_within_anchor_tags()
+    public function it_wraps_mentioned_usernames_in_the_body_within_anchor_tags()
     {
         $reply = new Reply([
             'body' => 'Hello @Jane-Doe.'
@@ -45,7 +45,7 @@ class ReplyTest extends TestCase
     }
 
     /** @test */
-    function it_knows_if_it_is_the_best_reply()
+    public function it_knows_if_it_is_the_best_reply()
     {
         $reply = create(\App\Reply::class);
 
@@ -57,7 +57,7 @@ class ReplyTest extends TestCase
     }
 
     /** @test */
-    function a_reply_body_is_sanitized_automatically()
+    public function a_reply_body_is_sanitized_automatically()
     {
         $reply = make(\App\Reply::class, ['body' => '<script>alert("bad")</script><p>This is okay.</p>']);
 
@@ -65,7 +65,7 @@ class ReplyTest extends TestCase
     }
 
     /** @test */
-    function a_reply_knows_the_total_xp_earned()
+    public function a_reply_knows_the_total_xp_earned()
     {
         $this->signIn();
 
@@ -80,5 +80,18 @@ class ReplyTest extends TestCase
         $this->post(route('replies.favorite', $reply)); // 5 points for favoriting.
 
         $this->assertEquals(57, $reply->xp);
+    }
+
+    /** @test */
+    public function it_generates_the_correct_path_for_a_paginated_thread()
+    {
+        $thread = create('App\Thread');
+        $replies = create('App\Reply', ['thread_id' => $thread->id], 3);
+
+        config(['council.pagination.perPage' => 1]);
+
+        $this->assertEquals($thread->path() . '?page=1#reply-1', $replies->first()->path());
+        $this->assertEquals($thread->path() . '?page=2#reply-2', $replies[1]->path());
+        $this->assertEquals($thread->path() . '?page=3#reply-3', $replies->last()->path());
     }
 }
